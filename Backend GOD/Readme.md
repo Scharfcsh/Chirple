@@ -1,0 +1,1 @@
+A complete god level backend project for beginer developers. This project is at that level nobody ever expected to see.

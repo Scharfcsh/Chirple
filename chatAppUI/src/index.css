@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  padding-left: 0%;
+  padding-right: 0%;
+}
+
+/* html,
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(https://images.hdqwalls.com/download/abstract-simple-colors-8k-jk-1366x768.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  /* filter: brightness(40%); */
+/* } */ 
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 4s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 8s;
+  }
+}
