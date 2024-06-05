@@ -7,9 +7,10 @@ import authRoutes from "./routes/auth.routes.js";
 import messageRoutes from "./routes/message.routes.js";
 import userRoutes from "./routes/user.routes.js";
 import connectDB from "./db/connectDB.js";
+import {server, app} from "./socket/socket.js";
 
 const PORT = process.env.PORT || 3000;
-const app = express();
+// const app = express();
 
 dotenv.config();
 
@@ -22,11 +23,11 @@ app.use("/api/users",userRoutes);
 
 
 
-app.get('/', (req, res)=>{
-    res.send('Hello World!')
-})
+// app.get('/', (req, res)=>{
+//     res.send('Hello World!')
+// })
 
-app.listen(PORT, ()=>{
+server.listen(PORT, ()=>{
 
     // connectDB().then(()=> console.log("Connected to Mongodb from Index")).catch(()=> console.log(error));
     connectDB()

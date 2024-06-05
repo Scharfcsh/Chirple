@@ -11,7 +11,7 @@ export const getUserForSideBar = async (req, res) => {
         //================================================================
 
         const filteredUsers = await User.find({}).select("-password");
-        console.log("filteredUsers check");
+        // console.log("filteredUsers check");
 
         res.status(200).json(filteredUsers);
 

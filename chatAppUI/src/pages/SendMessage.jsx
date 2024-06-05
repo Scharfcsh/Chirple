@@ -6,9 +6,8 @@ import useSendMessage from "../hooks/useSendMessage"
 
 function SendMessage() {
   const [message, setMessage]=useState("");
-  // const {loading,sendtheMessage}= useSendMessage();
-  // const {loading , sendMessage} = useSendMessage();
-  const {loading, sendMessage} = useSendMessage()
+ 
+  const {loading, sendMessage} = useSendMessage();
   
   const handleSubmit = async(e) => {
     e.preventDefault();
@@ -38,8 +37,9 @@ function SendMessage() {
           <FaPaperclip className="text-2xl text-black"/>
         </button>
 
-        <button className="p-2 ml-2 rounded-full bg-indigo-900 hover:bg-red-600 focus:outline-none focus:ring" type='submit'>
+        <button className="p-2 ml-2 rounded-full bg-indigo-900 hover:bg-red-600 focus:outline-none focus:ring" type="submit">{loading? <div className='loading loading-spinner'></div> : 
           <IoSend className="text-2xl"/>
+        }
         </button>
       </form>
       

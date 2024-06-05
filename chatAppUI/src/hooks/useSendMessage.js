@@ -11,13 +11,14 @@ const useSendMessage = () => {
     setLoading(true);
     try {
         const res= await fetch(`/api/messages/send/${selectedConversation._id}`,{
-            method:"POST",
+            method: 'POST',
             headers:{
                 "Content-Type":"application/json"
             },
             body:JSON.stringify({message}),
         });
         const data= await res.json();
+        console.log(data);
         if(data.error){
             throw new Error(data.error);
         };
@@ -28,7 +29,7 @@ const useSendMessage = () => {
         setLoading(false);
     }
   };
-  return [loading, sendMessage];
+  return { sendMessage, loading};
 };
 
 export default useSendMessage;
