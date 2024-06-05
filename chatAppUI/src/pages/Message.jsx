@@ -7,9 +7,11 @@ function Message({conversation}) {
     // const [online,setOnline]= useState(false);
     const {selectedConversation, setSelectedConversation}=useConversation();
     const isSelected=selectedConversation?._id === conversation._id;
-    const user = JSON.parse(window.localStorage.getItem("chat-user"));
     const {onlineUsers}= useSocketContext();
-    const isOnline = onlineUsers.includes(conversation._id)
+    const isOnline = onlineUsers.includes(conversation._id);
+
+
+    const user = JSON.parse(window.localStorage.getItem("chat-user"));
     // console.log(user);
   return (
     <div className={`flex flex-row p-3 gap-4 hover:bg-gray-700 cursor-pointer ${isSelected? "bg-indigo-700 hover:bg-indigo-500":""}`} onClick={()=>setSelectedConversation(conversation)}>

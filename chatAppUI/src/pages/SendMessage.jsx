@@ -11,7 +11,7 @@ function SendMessage() {
   
   const handleSubmit = async(e) => {
     e.preventDefault();
-    console.log(message);
+    // console.log(message);
     
     if(!message) return;
     await sendMessage(message);
