@@ -21,6 +21,7 @@ function Home() {
           <div className="absolute top-28 -right-6 w-72 h-72 bg-yellow-400 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
           <div className="absolute bottom-40 left-20 w-72 h-72 bg-pink-400 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
           <div className=" flex  flex-col items-center justify-center h-screen">
+            <img src="..\src\assets\icons8-chat-64.png" alt="logo" className="z-10 size-40"/>
             <div className=" text-5xl z-40 font-black text-center text-white mb-5">
               Elevate Your Conversations.
             </div>
