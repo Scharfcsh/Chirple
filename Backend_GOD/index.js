@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 // Allow specific origin(s)
 app.use(cors({
-  origin: 'https://yourdeployedsite.com'
+  origin: 'http://localhost:5173'
 }));
 
 dotenv.config();
