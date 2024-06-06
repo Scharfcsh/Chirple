@@ -15,13 +15,13 @@ import cors from 'cors';
 const PORT = process.env.PORT || 3000;
 // const app = express();
 
-// app.use(cors());
-// Allow specific origin(s)
-app.use(cors({
-  origin: '*',
-  credentials:true,
-  optionsSuccessStatus: 200
-}));
+// // app.use(cors());
+// // Allow specific origin(s)
+// app.use(cors({
+//   origin: 'http://localhost:5173',
+//   credentials:true,
+//   optionsSuccessStatus: 200
+// }));
 
 dotenv.config();
 
@@ -33,7 +33,12 @@ app.use("/api/messages",messageRoutes);
 app.use("/api/users",userRoutes);
 
 
-
+let corsOptions = {
+    origin: ["http://localhost:3000"],
+  };
+  
+app.use(cors(corsOptions));
+  
 
 
 app.get('/isactive', (req, res)=>{
