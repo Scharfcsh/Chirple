@@ -8,7 +8,7 @@ export default defineConfig({
    
     proxy:{
       '/api':{
-        target:'https://chirplebackend.vercel.app/'
+        target:'https://chirplebackend.vercel.app'
       }
     }
   }
