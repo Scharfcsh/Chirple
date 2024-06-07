@@ -34,7 +34,9 @@ app.use("/api/users",userRoutes);
 
 
 let corsOptions = {
-    origin: ["http://localhost:3000"],
+    origin: "http://localhost:3000",
+    credential : true,
+    methods: ["GET", "HEAD","POST"]
   };
   
 app.use(cors(corsOptions));
