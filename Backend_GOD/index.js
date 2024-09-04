@@ -34,9 +34,9 @@ app.use("/api/users",userRoutes);
 
 
 let corsOptions = {
-    origin: "http://localhost:3000",
+    origin: "https://chirple-nine.vercel.app",
     credential : true,
-    methods: ["GET", "HEAD","POST"]
+    methods: ["GET", "HEAD","POST", "PUT", "DELETE"],
   };
   
 app.use(cors(corsOptions));
